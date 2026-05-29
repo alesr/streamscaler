@@ -1,4 +1,4 @@
-package streamscaler
+package engine
 
 import (
 	"context"
@@ -30,7 +30,7 @@ type Engine struct {
 	lastScaleUpTime time.Time
 }
 
-func NewEngine(logger *slog.Logger, p BacklogProvider, s WorkloadScaler, cfg Config) *Engine {
+func New(logger *slog.Logger, p BacklogProvider, s WorkloadScaler, cfg Config) *Engine {
 	return &Engine{
 		logger:   logger.WithGroup("streamscaler-engine"),
 		provider: p,

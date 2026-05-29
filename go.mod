@@ -1,4 +1,4 @@
-module github.com/alesr/workerpool/streamscaler
+module github.com/alesr/autoscaler-engine
 
 go 1.26.1
 
